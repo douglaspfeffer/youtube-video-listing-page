@@ -1,0 +1,173 @@
+/* Importando o CSS reset */
+@import url(./reset.css);
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    height: 100vh;
+    
+    display: grid;
+    grid-template-columns: 0.5fr repeat(4, 1fr);
+    grid-template-rows: 5.6rem repeat(3, 30rem) auto;
+    grid-template-areas: 
+    "header header header header header header" 
+    "sidebar main main main main main" 
+    "sidebar main main main main main" 
+    "sidebar main main main main main" 
+    "sidebar main main main main main" ;
+}
+
+/* Início do header */
+header{
+    /* background-color: orange; */
+    background-color: #FFFFFF;
+    grid-area: header;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .left{
+    display: flex;
+    /* background-color: palevioletred; */
+    width: 14.6rem;
+    height: 2.4rem;
+
+    margin-left: 2.4rem;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .left img:first-child{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+header .left img:last-child{
+    width: 9rem;
+    height: 2rem;
+}
+
+header .center{
+    display: flex;
+    width: 40rem;
+    height: 4rem;
+    margin: 0 35.6rem 0 35.6rem;
+}
+
+header .center form input{
+    width: 34rem;
+    height: 4rem;
+    border: 1px solid #CCCCCC;
+}
+
+header .center button{ 
+    width: 6rem;
+    height: 4rem;
+
+    cursor: pointer;
+
+    border: 1px solid #CCCCCC;
+    background: linear-gradient(0deg, #CCCCCC, #CCCCCC),
+linear-gradient(0deg, #F8F8F8, #F8F8F8);
+
+}
+
+header .right{
+    display: flex;
+    /* background-color: paleturquoise; */
+    width: 13rem;
+    height: 3.5rem;
+
+    margin-right: 2.4rem;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .right img:first-child{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+header .right img.bell{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+header .right img:last-child{
+    width: 3.4rem;
+    height: 3.4rem;
+
+    border-radius: 50%;
+}
+/* Fim do header */
+
+/* Início do main */
+main{
+    /* background-color: deepskyblue; */
+    background-color: #F9F9F9;
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: repeat(4, 28fr);
+    grid-template-rows: repeat(1, 26rem);
+    grid-auto-rows: 26rem;
+
+    justify-content: space-evenly;
+}
+
+main .container{
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.6rem;
+    padding: 1.6rem;
+    margin-top: 2.4rem;
+}
+
+main .container-info{
+    display: flex;
+}
+
+main .container-info ul li{
+    width: 19rem;
+}
+
+main .container-info li.title{
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #000000;
+}
+
+main .container-info li.text{
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #515151;
+}
+/* Fim do main */
+
+/* Início do aside */
+aside{
+    /* background-color: lightcoral; */
+    background-color: #FFFFFF;
+    grid-area: sidebar;
+}
+
+aside ul li{
+    display: flex;
+    align-items: center;
+
+    white-space: nowrap;
+
+    margin: 2.4rem 0 2.2rem 2.4rem;
+}
+/* Fim do aside */
